@@ -6,7 +6,7 @@ import PageTitle from './components/PageTitle';
 import SignIn from './pages/Authentication/SignIn';
 import SignUp from './pages/Authentication/SignUp';
 import Calendar from './pages/Calendar';
-import Chart from './pages/Chart';
+import Chart from './pages/Chart.jsx';
 import ECommerce from './pages/Dashboard/ECommerce';
 import FormElements from './pages/Form/FormElements';
 import FormLayout from './pages/Form/FormLayout';
@@ -18,7 +18,7 @@ import Buttons from './pages/UiElements/Buttons';
 import DefaultLayout from './layout/DefaultLayout';
 
 function App() {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState(true);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -52,15 +52,7 @@ function App() {
             </>
           }
         />
-        <Route
-          path="/profile"
-          element={
-            <>
-              <PageTitle title="Profile | Admin - Tailwind CSS Admin Dashboard Template" />
-              <Profile />
-            </>
-          }
-        />
+       
         <Route
           path="/forms/form-elements"
           element={
